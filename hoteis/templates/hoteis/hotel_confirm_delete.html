@@ -1,0 +1,12 @@
+{% include 'core/inicio.html' %}
+
+
+{% block content %}
+
+<h1>Deletar hotel</h1>
+<form method="post">{% csrf_token %}
+    Deseja realmente deletar o hotel "{{ object }}" ?
+    <input type="submit" value="Apagar" />
+</form>
+
+{% endblock %}

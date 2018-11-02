@@ -1,0 +1,15 @@
+{% include 'core/inicio.html' %}
+
+
+{% block content %}
+
+<h1>Detalhes da venda</h1>
+<h2>Cliente: {{object.cliente}}</h2>
+<h2>Voo de ida: {{object.voo_ida}} </h2>
+<h2>Voo de volta: {{object.voo_volta}}</h2>
+<h2>Hotel: {{object.hotel}}</h2>
+<h2>Diárias: {{object.diarias}}</h2>
+<h2>Realizada em: {{object.realizada_em}}</h2>
+
+
+{% endblock %}

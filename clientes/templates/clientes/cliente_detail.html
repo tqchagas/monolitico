@@ -1,0 +1,17 @@
+{% include 'core/inicio.html' %}
+
+
+{% block content %}
+
+<h1>Detalhes do cliente</h1>
+<h2>nome: {{object.nome}}</h2>
+<h2>Sexo: {{object.get_type_diplay}} </h2>
+<h2>Telefone: {{object.telefone}}</h2>
+<h2>Celular: {{object.celular}}</h2>
+<h2>Logradouro: {{object.logradouro}}</h2>
+<h2>Número: {{object.numero}}</h2>
+<h2>complemento: {{object.complemento}}</h2>
+<h2>Chegada: {{object.chegada}}</h2>
+
+
+{% endblock %}

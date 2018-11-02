@@ -1,0 +1,11 @@
+{% include 'core/inicio.html' %}
+
+
+{% block content %}
+
+<h1>Detalhes do hotel</h1>
+<h2>Nome: {{object.nome}}</h2>
+<h2>Endereço: {{object.logradouro}} {{object.numero}} {{object.complemento}} {{object.cidade}} {{object.estado}} </h2>
+<h2>Valor diária: R$ {{object.valor_diaria}}</h2>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% load bootstrap3 %}
+
+{% include 'core/inicio.html' %}
+
+
+{% block content %}
+
+<h1>{% if object %}Editar {% else %} Cadastrar {% endif %} hotel {{object}}</h1>
+<form method="post">{% csrf_token %}
+    {% bootstrap_form form %}
+    <input type="submit" value="{% if object %}Editar {% else %} Cadastrar {% endif %}" />
+</form>
+
+{% endblock %}

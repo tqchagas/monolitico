@@ -1,0 +1,35 @@
+{% include 'core/inicio.html' %}
+
+
+{% block content %}
+    <h1>Comissões</h1>
+
+    <table class="table">
+    <thead>
+        <tr>
+        <th>Cliente</th>
+        <th>Venda</th>
+        <th>Realizada em</th>
+        <th>Comissão</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for comissao in comissoes %}
+        <tr>
+        <td>{{ comissao.venda.cliente }}</td>
+        <td><a href="/vendas/visualizar/{{comissao.venda.pk}}" target="_blank">#{{ comissao.venda.pk }}</td>
+        
+        <td>{{ comissao.venda.realizada_em }}</td>
+        <td>{{ comissao.comissao }}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+        	<td></td>
+        	<td></td>
+        	<td></td>
+        	<td>{{total}}</td>
+        </tr>
+    </tbody>
+    </table>
+
+{% endblock %}

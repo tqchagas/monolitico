@@ -1,0 +1,12 @@
+{% include 'core/inicio.html' %}
+
+
+{% block content %}
+
+<h1>Deletar voo</h1>
+<form method="post">{% csrf_token %}
+    Deseja realmente deletar o voo "{{ object }}" ?
+    <input type="submit" value="Apagar" />
+</form>
+
+{% endblock %}

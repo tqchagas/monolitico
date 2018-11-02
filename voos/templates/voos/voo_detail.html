@@ -1,0 +1,13 @@
+{% include 'core/inicio.html' %}
+
+
+{% block content %}
+
+<h1>Detalhes do voo</h1>
+<h2>Origem: {{object.origem}}</h2>
+<h2>Destino: {{object.destino}}</h2>
+<h2>Número: {{object.numero}}</h2>
+<h2>Partida: {{object.partida}}</h2>
+<h2>Chegada: {{object.chegada}}</h2>
+
+{% endblock %}

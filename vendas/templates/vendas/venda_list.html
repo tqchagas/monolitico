@@ -1,0 +1,33 @@
+{% include 'core/inicio.html' %}
+
+
+{% block content %}
+    <h1>Vendas</h1>
+
+    <table class="table">
+    <thead>
+        <tr>
+        <th>Cliente</th>
+        <th>Voo</th>
+        <th>Hotel</th>
+        <th>Visualizar</th>
+        <th>Deletar</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for venda in object_list %}
+        <tr>
+        <td>{{ venda.cliente }}</td>
+        <td>{{ venda.voo }}</td>
+        <td>{{ venda.hotel }}</td>
+        <td><a href="{% url "visualizar_venda" venda.id %}">Visualizar</a></td>
+        <td><a href="{% url "apagar_venda" venda.id %}">Apagar</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+
+    <a href="{% url "novo_venda" %}">Nova venda</a>
+    <br>
+    <a href="">Relatório de vendas</a>
+{% endblock %}
