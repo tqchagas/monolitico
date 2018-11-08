@@ -25,7 +25,7 @@ SECRET_KEY = ')k!qa#fc3=z1rxm#*x-9@qjg51-@js(dh*zk=k=$*jk**52d0i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['monolitico.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
